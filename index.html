@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="theme1">
+    <div class="container">
+      <div class="calculator-container">
+        <section class="heading">
+          <h3>calc</h3>
+          <div class="btn-group">
+            <div class="listing">
+              <div class="1">1</div>
+              <div class="2">2</div>
+              <div class="3">3</div>
+            </div>
+            <div class="buttons">
+              <div id="theme1" class="theme"></div>
+              <div id="theme2" class="theme theme-hide"></div>
+              <div id="theme3" class="theme theme-hide"></div>
+            </div>
+          </div>
+        </section>
+        <section class="display">
+          <input id="display" type="text" class="input" />
+        </section>
+        <section class="keys">
+          <div class="keys1">
+            <div id="7" class="btn">7</div>
+            <div id="8" class="btn">8</div>
+            <div id="9" class="btn">9</div>
+            <div id="del" class="btn btn-secondary">Del</div>
+          </div>
+          <div class="keys2">
+            <div id="4" class="btn">4</div>
+            <div id="5" class="btn">5</div>
+            <div id="6" class="btn">6</div>
+            <div id="+" class="btn">+</div>
+          </div>
+          <div class="keys3">
+            <div id="1" class="btn">1</div>
+            <div id="2" class="btn">2</div>
+            <div id="3" class="btn">3</div>
+            <div id="-" class="btn">-</div>
+          </div>
+          <div class="keys4">
+            <div id="." class="btn">.</div>
+            <div id="0" class="btn">0</div>
+            <div id="/" class="btn">/</div>
+            <div id="x" class="btn">*</div>
+          </div>
+          <div class="keys5">
+            <div id="reset" class="btn btn-secondary btn-lg">Reset</div>
+            <div id="=" class="btn btn-primary btn-lg">=</div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

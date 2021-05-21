@@ -1,0 +1,36 @@
+@mixin key-style {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+@mixin btn-style {
+  padding: 10px;
+  text-align: center;
+  color: var(--text);
+  background: var(--l-grayish-orage);
+  box-shadow: 0px 5px var(--grayish-orage);
+  width: 100px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+@mixin btn-secondary {
+  @include btn-style;
+  background: var(--key-bg);
+  box-shadow: 0px 5px var(--key-shadow);
+  color: var(--t-s-white);
+}
+
+@mixin btn-primary {
+  @include btn-style;
+  background: var(--red);
+  box-shadow: 0px 5px var(--dark-red);
+  color: var(--l-grayish-orage);
+}
+
+@mixin btn-lg {
+  width: 45%;
+}

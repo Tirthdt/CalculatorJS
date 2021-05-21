@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --main-background: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --key-bg: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --red: hsl(6, 63%, 50%);
+  --dark-red: hsl(6, 70%, 34%);
+  --l-grayish-orage: hsl(30, 25%, 89%);
+  --grayish-orage: hsl(28, 16%, 65%);
+  --text: hsl(221, 14%, 31%);
+  --t-white: #fff;
+  --t-s-white: #fff;
+}
+
+.theme2 {
+  --main-background: hsl(0, 0%, 90%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --key-bg: hsl(185, 42%, 37%);
+  --key-shadow: hsl(185, 58%, 25%);
+  --red: hsl(25, 98%, 40%);
+  --dark-red: hsl(25, 99%, 27%);
+  --l-grayish-orage: hsl(45, 7%, 89%);
+  --grayish-orage: hsl(35, 11%, 61%);
+  --text: hsl(60, 10%, 19%);
+  --t-white: hsl(0, 0, 0%);
+  --t-s-white: #fff;
+}
+
+.theme3 {
+  --main-background: hsl(268, 75%, 9%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --key-bg: hsl(281, 89%, 26%);
+  --key-shadow: hsl(285, 91%, 52%);
+  --red: hsl(176, 100%, 44%);
+  --dark-red: hsl(177, 92%, 70%);
+  --l-grayish-orage: hsl(268, 47%, 21%);
+  --grayish-orage: hsl(290, 70%, 36%);
+  --text: hsl(52, 100%, 62%);
+  --t-white: hsl(52, 100%, 62%);
+  --t-s-white: #fff;
+}
+
+* {
+  -webkit-transition: background-color, color 0.1s ease-in-out;
+  transition: background-color, color 0.1s ease-in-out;
+}
+
+body {
+  font-size: 32px;
+  font-family: "Spartan", sans-serif;
+  background-color: var(--main-background);
+  color: var(--t-white);
+}
+
+body .container {
+  max-width: 1000px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px auto;
+}
+
+body .container .calculator-container {
+  width: 60%;
+  margin: 0 auto;
+  color: var(--t-white);
+}
+
+body .container .calculator-container .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+body .container .calculator-container .heading h3 {
+  color: var(--t-white);
+}
+
+body .container .calculator-container .heading .btn-group {
+  width: 75px;
+  height: 30px;
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .calculator-container .heading .btn-group .listing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .container .calculator-container .heading .btn-group .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: var(--keypad-bg);
+  border-radius: 15px;
+  height: 20px;
+}
+
+body .container .calculator-container .heading .btn-group .buttons .theme {
+  width: 17px;
+  height: 90%;
+  border-radius: 50%;
+  background: var(--red);
+  cursor: pointer;
+}
+
+body .container .calculator-container .heading .btn-group .buttons .theme-hide {
+  background: transparent;
+}
+
+body .container .calculator-container .heading .btn-group .buttons::before {
+  content: "Themes";
+  position: absolute;
+  top: 0;
+  left: -86%;
+  font-size: 14px;
+}
+
+body .container .calculator-container .display {
+  margin-bottom: 20px;
+}
+
+body .container .calculator-container .display input {
+  width: 100%;
+  font-size: 40px;
+  font-family: "Spartan";
+  background: var(--screen-bg);
+  padding: 20px 10px;
+  border: none;
+  border-radius: 6px;
+  color: var(--t-white);
+  text-align: right;
+}
+
+body .container .calculator-container .display input:focus {
+  border: 2px solid var(--text);
+}
+
+body .container .calculator-container .keys {
+  background: var(--keypad-bg);
+  padding: 20px 40px;
+  border-radius: 6px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "keys1" "keys2" "keys3" "keys4" "keys5";
+}
+
+body .container .calculator-container .keys1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: keys1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .calculator-container .keys2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: keys2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .calculator-container .keys3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: keys3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .calculator-container .keys4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: keys4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .calculator-container .keys5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: keys5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .calculator-container .keys .btn {
+  padding: 10px;
+  text-align: center;
+  color: var(--text);
+  background: var(--l-grayish-orage);
+  -webkit-box-shadow: 0px 5px var(--grayish-orage);
+          box-shadow: 0px 5px var(--grayish-orage);
+  width: 100px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+body .container .calculator-container .keys .btn-secondary {
+  padding: 10px;
+  text-align: center;
+  color: var(--text);
+  background: var(--l-grayish-orage);
+  -webkit-box-shadow: 0px 5px var(--grayish-orage);
+          box-shadow: 0px 5px var(--grayish-orage);
+  width: 100px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-transform: uppercase;
+  background: var(--key-bg);
+  -webkit-box-shadow: 0px 5px var(--key-shadow);
+          box-shadow: 0px 5px var(--key-shadow);
+  color: var(--t-s-white);
+}
+
+body .container .calculator-container .keys .btn-primary {
+  padding: 10px;
+  text-align: center;
+  color: var(--text);
+  background: var(--l-grayish-orage);
+  -webkit-box-shadow: 0px 5px var(--grayish-orage);
+          box-shadow: 0px 5px var(--grayish-orage);
+  width: 100px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-transform: uppercase;
+  background: var(--red);
+  -webkit-box-shadow: 0px 5px var(--dark-red);
+          box-shadow: 0px 5px var(--dark-red);
+  color: var(--l-grayish-orage);
+}
+
+body .container .calculator-container .keys .btn-lg {
+  width: 45%;
+}
+
+body .container .calculator-container .keys .btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@media (max-width: 600px) {
+  body .container {
+    max-width: 90vw;
+  }
+  body .container .calculator-container {
+    width: 100%;
+  }
+  body .container .calculator-container .keys {
+    padding: 10px;
+  }
+  body .container .calculator-container .keys .btn {
+    width: 65px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 15px;
+  }
+  body .container .calculator-container .keys .btn-lg {
+    width: 45%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
