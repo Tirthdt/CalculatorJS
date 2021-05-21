@@ -10,7 +10,8 @@ themeBtns.forEach((themeBtn) => {
     const buttons = document.querySelector(".buttons").childNodes;
     e.target.classList.remove("theme-hide");
     const previousTheme = document.querySelector("body").className;
-    document.querySelector("#" + previousTheme).classList.add("theme-hide");
+    if(themeId != previousTheme){
+    document.querySelector("#" + previousTheme).classList.add("theme-hide");}
     document.querySelector("body").classList.replace(previousTheme, themeId);
   });
 });
