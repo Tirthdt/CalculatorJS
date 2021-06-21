@@ -18,7 +18,7 @@ themeBtns.forEach((themeBtn) => {
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    const val = e.toElement.innerText;
+    const val = e.target.innerText;
     if (val == "DEL") {
       const value = expInput.value || "";
       if (value == "") {
